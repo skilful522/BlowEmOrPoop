@@ -1,5 +1,5 @@
-import {canvas, ctx} from "../canvas.js";
-import {player, gameFrame} from '../index.js';
+import {canvas, ctx} from "./canvas.js";
+import {player, gameFrame} from './index.js';
 
 const bubbleImage = new Image();
 bubbleImage.src = '../assets/images/bubble.png';

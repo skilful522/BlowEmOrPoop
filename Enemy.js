@@ -1,5 +1,5 @@
-import {canvas, ctx} from "../canvas.js";
-import {player} from "../index.js";
+import {canvas, ctx} from "./canvas.js";
+import {player} from "./index.js";
 
 const BASE_ENEMY_PATH = '../assets/images/enemies/';
 

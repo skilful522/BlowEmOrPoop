@@ -1,8 +1,8 @@
 import {canvas, ctx} from './canvas.js';
-import { Bubble } from './Bubble/index.js';
-import { Player } from './Player/index.js';
+import { Bubble } from './Bubble.js';
+import { Player } from './Player.js';
 import {handleBackground} from "./handleBackground.js";
-import {Enemy} from './Enemy/index.js';
+import {Enemy} from './Enemy.js';
 import {isCollisionOccurred} from "./utils/isCollisionOccurred.js";
 
 export let gameFrame = 0;

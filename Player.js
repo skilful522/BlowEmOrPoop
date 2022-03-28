@@ -1,5 +1,5 @@
-import {canvas, ctx} from "../canvas.js";
-import {gameFrame} from "../index.js";
+import {canvas, ctx} from "./canvas.js";
+import {gameFrame} from "./index.js";
 
 const playerLeft = new Image();
 playerLeft.src = '../assets/images/playerLeft.png';
