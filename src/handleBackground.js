@@ -1,8 +1,9 @@
 import {canvas, ctx} from "./canvas.js";
 import {gameSpeed} from "./index.js";
+import backgroundImg from './assets/images/background1.png';
 
 const backgroundImage = new Image();
-backgroundImage.src = '../assets/images/background1.png';
+backgroundImage.src = backgroundImg;
 
 const background = {
     x1: 0,

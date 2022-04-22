@@ -1,10 +1,12 @@
 import {canvas, ctx} from "./canvas.js";
 import {gameFrame} from "./index.js";
+import left from './assets/images/playerLeft.png'
+import right from './assets/images/playerRight.png'
 
 const playerLeft = new Image();
-playerLeft.src = '../assets/images/playerLeft.png';
+playerLeft.src = left;
 const playerRight = new Image();
-playerRight.src = '../assets/images/playerRight.png';
+playerRight.src = right;
 
 export class Player {
     constructor() {
