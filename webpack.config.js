@@ -1,24 +1,31 @@
 const path = require('path')
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
+    context: path.resolve(__dirname, 'src'),
+    mode: 'development',
     entry: './index.js',
-    module: {
-        rules: [{
-            test: /\.(png)$/,
-            use: [{
-                loader: 'file-loader',
-                options: {}
-            }, {
-                test: /\.(mp3|ogg|wav)$/i,
-                loader: 'file-loader',
-                options: {
-                    name: '[path][name].[ext]'
-                }
-            }]
-        }]
-    },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'index.js'
+        filename: 'bundle.js'
+    },
+    plugins: [
+        new HTMLWebpackPlugin({
+            template: './index.html'
+        }),
+        new CleanWebpackPlugin()
+    ],
+    module: {
+        rules: [
+            {
+            test: /\.css$/,
+            use: ['style-loader', 'css-loader']
+            },
+            {
+            test: /\.(png|mp3|wav|ogg)$/,
+            use: ['file-loader']
+        }
+        ],
     }
 }

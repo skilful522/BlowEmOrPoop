@@ -1,8 +1,9 @@
 import {canvas, ctx} from "./canvas.js";
 import {player, gameFrame} from './index.js';
+import img from './assets/images/bubble.png'
 
 const bubbleImage = new Image();
-bubbleImage.src = '../assets/images/bubble.png';
+bubbleImage.src = img;
 
 export class Bubble {
     constructor() {

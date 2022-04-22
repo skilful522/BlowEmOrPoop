@@ -1,9 +1,18 @@
 import {canvas, ctx} from "./canvas.js";
 import {player} from "./index.js";
+import enemy1 from './assets/images/enemies/enemy1.png'
+import enemy2 from './assets/images/enemies/enemy2.png'
+import enemy3 from './assets/images/enemies/enemy3.png'
+import enemy4 from './assets/images/enemies/enemy4.png'
 
-const BASE_ENEMY_PATH = '../assets/images/enemies/';
+const enemiesMap = {
+    1: enemy1,
+    2: enemy2,
+    3: enemy3,
+    4: enemy4,
+}
 
-const getEnemyImg = (enemy) => BASE_ENEMY_PATH + `enemy${enemy}.png`;
+const getEnemyImg = (enemy) => enemiesMap[enemy];
 
 export class Enemy {
     constructor() {

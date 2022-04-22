@@ -4,15 +4,21 @@ import { Player } from './Player.js';
 import {handleBackground} from "./handleBackground.js";
 import {Enemy} from './Enemy.js';
 import {isCollisionOccurred} from "./utils/isCollisionOccurred.js";
+import './styles.css';
+import gameOver from './assets/sounds/gameOver.mp3';
+import fishPassBy from './assets/sounds/fishPassBy.mp3';
+import environment from './assets/sounds/environment.mp3';
+import plop from './assets/sounds/Plop.ogg';
+import bubblesSingle from './assets/sounds/bubbles-single2.wav';
 
 export let gameFrame = 0;
 export let gameSpeed = 1;
 export let isGameOver = false;
 let score = 0;
 
-const gameOverSound = new Audio('./assets/sounds/gameOver.mp3');
-const fishPassBySound = new Audio('./assets/sounds/fishPassBy.mp3');
-const environmentSound = new Audio('./assets/sounds/environment.mp3');
+const gameOverSound = new Audio(gameOver);
+const fishPassBySound = new Audio(fishPassBy);
+const environmentSound = new Audio(environment);
 
 const mouse = {
     x: canvas.width / 2,
@@ -38,10 +44,10 @@ const bubbles = [...Array(10).keys()].map(() => new Bubble())
 const enemies = [...Array(0).keys()].map(() => new Enemy());
 
 const audio1 = document.createElement('audio');
-audio1.src = '../assets/sounds/Plop.ogg';
+audio1.src = plop;
 const audio2 = document.createElement('audio');
 
-audio2.src = '../assets/sounds/bubbles-single2.wav';
+audio2.src = bubblesSingle;
 
 const handleBubble = () => {
     if (gameFrame % 50 === 0) {
