@@ -53,7 +53,7 @@ const handleBubble = () => {
     if (gameFrame % 50 === 0) {
         bubbles.push(new Bubble());
     }
-    
+
     for (let i = 0; i < bubbles.length; i++) {
         const bubble = bubbles[i];
         if (bubble.y < 0 - bubble.radius * 2) {
@@ -69,7 +69,7 @@ const handleBubble = () => {
         }
         bubble.update();
         bubble.draw();
-        
+
     }
 }
 
@@ -119,8 +119,11 @@ const animate = () => {
     }
 }
 
-animate();
-environmentSound.play();
+window.onload = function(){
+    animate();
+    environmentSound.play();
+}
+
 
 window.addEventListener('resize', () => {
     canvasPosition = canvas.getBoundingClientRect();
