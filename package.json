@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "webpack --mode development",
     "deploy": "npm run build && gh-pages -d dist",
-    "deploy-demo": "git push origin :gh-pages && git subtree push --prefix dist origin gh-pages",
     "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
